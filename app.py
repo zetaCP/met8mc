@@ -63,8 +63,8 @@ if len(df) == 0:
 
 st.sidebar.markdown("---")
 
-w_gOSI = st.sidebar.slider("Min gOSI:", float(df['gOSI'].min()), float(max(df['gOSI'].min(), df['gOSI'].max())), float(df['gOSI'].min()), step=0.05)
-w_cc_abs = st.sidebar.slider("Min cc_abs:", float(df['cc_abs'].min()), float(max(df['cc_abs'].min(), df['cc_abs'].max())), float(df['cc_abs'].min()), step=0.05)
+w_gOSI = st.sidebar.slider("Min gOSI:", float(df['gOSI'].min()), float(max(df['gOSI'].min(), df['gOSI'].max())), 0.1, step=0.05)
+w_cc_abs = st.sidebar.slider("Min cc_abs:", float(df['cc_abs'].min()), float(max(df['cc_abs'].min(), df['cc_abs'].max())), 0.2, step=0.05)
 
 n_pre_min, n_pre_max = int(df['n_pre'].min()), int(max(df['n_pre'].min(), df['n_pre'].max()))
 w_n_pre = st.sidebar.slider("Min n_pre:", n_pre_min, n_pre_max, n_pre_min, step=1)
